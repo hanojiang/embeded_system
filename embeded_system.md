@@ -9,3 +9,7 @@
 
 ## 丰田刹车门
 [丰田刹车门](https://www.arduino.cn/forum.php?mod=viewthread&tid=4766&page=1)
+
+## 编码器和译码器
+
+### 74LS148 译码器
