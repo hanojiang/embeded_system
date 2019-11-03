@@ -20,3 +20,15 @@
 ign1 | off | on | on |
 ign2 | off | on | off |
 start | off | off | on |
+
+## lin总线
+[说一说LIN总线](https://zhuanlan.zhihu.com/p/24393833)
+[LIN总线入门](https://zhuanlan.zhihu.com/p/38833752)
+
+通过帧ID求pid(protected id):
+@import "./src/lin/main.c" {class="line-numbers"}
+
+PID的全称是Protected identifier，它是header中一个最重要的结构，用于指示这个LIN帧的作用。从上图中可见，PID总共有6个bit的数据域，2个bit的保护域（根据前面的6个bit计算出来），所以PID总共有2的6次方，即64种取值，其中0 到 59 (0x3B)用于携带普通信号，60 (0x3C) 和 61 (0x3D)用于携带诊断数据和配置数据，62 (0x3E) 和 63 (0x3F)是保留的。
+![pid](./pic/pid.jpg)
+
+## can总线
